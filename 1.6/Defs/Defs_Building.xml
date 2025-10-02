@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>AquafaunaRegulator</defName>
+		<label>aquafauna regulator</label>
+		<description>An ultratech device that enhances the natural procreation of fish by
+			stabilizing nutrient and mineral levels in the body of water it is built next
+			to.\n\nOnly one device can be built for each body of water, as to not disrupt the
+			balance.</description>
+		<graphicData>
+			<texPath>FishCloner/FishCloner</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5, 5)</drawSize>
+			<shadowData>
+				<volume>(2.8, 2.0, 1.2)</volume>
+				<offset>(0.0, 0.0, -0.5)</offset>
+			</shadowData>
+		</graphicData>
+		<costList>
+			<Steel>500</Steel>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		</building>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1000</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<li Class="CompProperties_Flickable" />
+			<li Class="WaterBodyModifier.CompProperties_WaterBodyModifier">
+				<requiresPower>true</requiresPower>
+				<writeTimeLeftToAction>true</writeTimeLeftToAction>
+				<populationRefillPercentage>0.20</populationRefillPercentage>
+				<interval>60000</interval>
+				<similarDefs>
+					<li>FishBay</li>
+				</similarDefs>
+			</li>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>-10</Beauty>
+			<Mass>80</Mass>
+			<WorkToBuild>8000</WorkToBuild>
+		</statBases>
+		<researchPrerequisites>
+			<li>Fishing</li>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
+		<tickerType>Rare</tickerType>
+		<size>(3, 3)</size>
+		<fillPercent>1.0</fillPercent>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<terrainAffordanceNeeded />
+		<placeWorkers>
+			<li>WaterBodyModifier.PlaceWorker_WaterBodyModifier</li>
+		</placeWorkers>
+		<passability>Impassable</passability>
+		<rotatable>true</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<designationCategory>Misc</designationCategory>
+	</ThingDef>
+
+	<ThingDef
+		ParentName="BuildingBase">
+		<defName>FishBay</defName>
+		<label>fish bay</label>
+		<description>A small, closed-off area of water used to breed new fish, repopulating lakes and ponds. The netting prevents any predators from snatching fish fry.\n\nMust be regularly replenished with kibble.</description>
+		<graphicData>
+			<texPath>FishBay/FishBay</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5, 5)</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<thingCategories>
+			<li>BuildingsSpecial</li>
+		</thingCategories>
+		<costList>
+			<WoodLog>400</WoodLog>
+		</costList>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound> <!-- Change -->
+		</building>
+		<comps>
+			<li Class="WaterBodyModifier.CompProperties_RefuelableRare">
+				<fuelConsumptionRate>25.0</fuelConsumptionRate>
+				<fuelCapacity>75.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>Kibble</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+				<canEjectFuel>true</canEjectFuel>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<li Class="CompProperties_Flickable" />
+			<li Class="WaterBodyModifier.CompProperties_WaterBodyModifierExtra">
+				<requresFuel>true</requresFuel>
+				<writeTimeLeftToAction>true</writeTimeLeftToAction>
+				<populationRefillPercentage>0.10</populationRefillPercentage>
+				<interval>60000</interval>
+				<similarDefs>
+					<li>AquafaunaRegulator</li>
+				</similarDefs>
+			</li>
+		</comps>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>-10</Beauty>
+			<Mass>35</Mass>
+			<WorkToBuild>8000</WorkToBuild>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<size>(3, 3)</size>
+		<fillPercent>1.0</fillPercent>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<terrainAffordanceNeeded />
+		<placeWorkers>
+			<li>WaterBodyModifier.PlaceWorker_WaterBodyModifierExtra</li>
+		</placeWorkers>
+		<passability>Impassable</passability>
+		<rotatable>true</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>Sellable</tradeability>
+		<designationCategory>Misc</designationCategory>
+	</ThingDef>
+
+</Defs>

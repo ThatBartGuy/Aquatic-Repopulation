@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- Aquafauna Regulator -->
+
+	<Operation Class="WaterBodyModifier.PatchOperationIntRange">
+        <setting>replenishPercent</setting>
+        <xpath>Defs/ThingDef[defName="AquafaunaRegulator"]/comps/li[@Class="WaterBodyModifier.CompProperties_WaterBodyModifier"]/populationRefillPercentage</xpath>
+    </Operation>
+
+	<Operation Class="WaterBodyModifier.PatchOperationIntRange">
+        <setting>interval</setting>
+        <xpath>Defs/ThingDef[defName="AquafaunaRegulator"]/comps/li[@Class="WaterBodyModifier.CompProperties_WaterBodyModifier"]/interval</xpath>
+    </Operation>
+
+	<Operation Class="WaterBodyModifier.PatchOperationIntRange">
+        <setting>powerDraw</setting>
+        <xpath>Defs/ThingDef[defName="AquafaunaRegulator"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+    </Operation>
+
+    <!-- Fish Bay -->
+
+    <Operation Class="WaterBodyModifier.PatchOperationIntRange">
+        <setting>replenishPercentFuel</setting>
+        <xpath>Defs/ThingDef[defName="FishBay"]/comps/li[@Class="WaterBodyModifier.CompProperties_WaterBodyModifierExtra"]/populationRefillPercentage</xpath>
+    </Operation>
+
+	<Operation Class="WaterBodyModifier.PatchOperationIntRange">
+        <setting>intervalFueled</setting>
+        <xpath>Defs/ThingDef[defName="FishBay"]/comps/li[@Class="WaterBodyModifier.CompProperties_WaterBodyModifierExtra"]/interval</xpath>
+    </Operation>
+
+	<Operation Class="WaterBodyModifier.PatchOperationIntRange">
+        <setting>fuelConsumption</setting>
+        <xpath>Defs/ThingDef[defName="FishBay"]/comps/li[@Class="WaterBodyModifier.CompProperties_RefuelableRare"]/fuelConsumptionRate</xpath>
+    </Operation>
+    
+
+</Patch>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<WM_NextAct>Repopulates fish in</WM_NextAct>
+
+<WM_MustBeWater>Must be placed near water</WM_MustBeWater>
+
+<WM_WaterZoneTaken>This body of water already has a similar building</WM_WaterZoneTaken>
+
+<WM_WaterCellsPresent>There are no water cells present</WM_WaterCellsPresent>
+
+<WM_ModMenu>Aquatic Repopulation</WM_ModMenu>
+
+<WM_OnePerZone>Zone limit</WM_OnePerZone>
+<WM_OnePerZoneDesc>Should a fishing zone be limited to only one building?</WM_OnePerZoneDesc>
+
+<WM_Percent>Repopulate percantage</WM_Percent>
+<WM_PercentDesc>The percentage of fish to repopulate in one go</WM_PercentDesc>
+
+<WM_PowerDraw>Power draw</WM_PowerDraw>
+<WM_PowerDrawDesc>Power draw of the electric repopulator</WM_PowerDrawDesc>
+
+<WM_Interval>Interval</WM_Interval>
+<WM_IntervalDesc>Interval between activations measured in ticks (Best make it divisible by 250)</WM_IntervalDesc>
+
+<WM_PercentFuel>Repopulate percantage</WM_PercentFuel>
+<WM_PercentFuelDesc>The percentage of fish to repopulate in one go</WM_PercentFuelDesc>
+
+<WM_FuelConsumption>Kibble consumption</WM_FuelConsumption>
+<WM_FuelConsumptionDesc>How much kibble should be consumed daily</WM_FuelConsumptionDesc>
+
+<WM_IntervalFuel>Interval</WM_IntervalFuel>
+<WM_IntervalFuelDesc>Interval between activations measured in ticks (Best make it divisible by 250)</WM_IntervalFuelDesc>
+
+</LanguageData>
